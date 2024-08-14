@@ -1,0 +1,346 @@
+.month-head-nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+}
+
+@font-face {
+  font-family: "SF Pro";
+  src: local("SFProText-Regular"),
+    url("./fonts/SFProText-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "SF Pro-Semibold";
+  src: local("SFProText-Semibold"),
+    url("./fonts/SFProText-Semibold.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "TriodPostnaja";
+  src: local("TriodPostnaja"),
+    url("./fonts/TriodPostnaja.ttf") format("truetype");
+}
+
+
+body {
+  font-family: "SF Pro";
+  font-size: 14px;
+  height: 100%;
+  position: relative;
+  overflow-x: hidden;
+  box-sizing: border-box;
+
+}
+
+.container {
+  width: 100%;
+  max-width: 1136px;
+  padding: 0 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.btn {
+  font-family: "SF Pro";
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 20px;
+  padding: 14px 60px;
+  border-radius: 12px;
+  background: #474747;
+  color: white;
+  cursor: pointer;
+
+}
+
+.team-head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-small {
+  font-family: "SF Pro";
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 20px;
+  padding: 8px 22px;
+  border-radius: 12px;
+  background: #474747;
+  color: white;
+  cursor: pointer;
+}
+
+.content-title {
+  font-family: "SF Pro";
+  font-size: 22px;
+  font-weight: 590;
+  line-height: 24px;
+  text-align: left;
+}
+
+.team-people {
+  display: flex;
+  gap: 16px;
+}
+
+.name {
+  padding-top: 16px;
+}
+
+.nav-item a {
+  font-family: "SF Pro";
+  font-size: 13px;
+  font-weight: 510;
+  line-height: 12px;
+  text-align: left;
+  color: #999999;
+
+}
+
+.nav-item {
+  cursor: pointer;
+}
+
+.nav-item a.active {
+  font-family: "SF Pro";
+  font-size: 13px;
+  font-weight: 510;
+  line-height: 12px;
+  text-align: left;
+  color: #007AFF;
+
+}
+
+.flex-container {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.center-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+@media (max-width:1042px) {
+  .flex-container {
+    flex-wrap: wrap;
+  }
+
+  .sundy-tiles {
+    width: 100% !important;
+  }
+
+  .two-tiles {
+    width: 100% !important;
+  }
+
+  .second-tiles,
+  .first-tiles {
+    width: 100%;
+  }
+
+  .team-head {
+    padding-bottom: 16px;
+    align-items: center;
+  }
+
+}
+
+.changed-btn {
+  font-family: "SF Pro";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: center;
+  min-width: 80px;
+  cursor: pointer;
+}
+
+.changed-btn.active {
+  padding: 3px 10px 3px 10px;
+  border-radius: 7px;
+  box-shadow: 0px 3px 1px 0px #0000000A;
+  box-shadow: 0px 3px 8px 0px #0000001F;
+  background-color: white;
+  font-weight: bold;
+
+
+}
+
+.color-red {
+  color: #EA6060;
+}
+
+.ant-select-selector {
+  border-radius: 12px !important;
+  border-color: black !important;
+}
+
+.btn-chor {
+  padding: 12px 82.5px;
+  background: #474747;
+  border-radius: 12px;
+  color: #FFFFFF;
+  font-family: "SF Pro";
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 16px;
+  text-align: left;
+
+
+}
+
+.slick-dots li {
+  width: auto !important;
+  height: auto !important;
+}
+
+ul li.slick-active {
+  border-radius: 9px;
+  border: 1px solid black;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+  font-size: 24px;
+}
+
+.slick-prev:before {
+  content: url("../src/assets/arrow-left.svg");
+  position: relative;
+  left: 16px;
+  z-index: 222;
+}
+
+.slick-next:before {
+  content: url("../src/assets/arrow-right.svg");
+  position: relative;
+  right: 16px;
+  z-index: 222;
+
+}
+
+.slick-dots {
+  position: unset;
+}
+
+
+/* Reset and base styles  */
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Links */
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Common */
+
+aside,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul,
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button,
+input[type="submit"] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}

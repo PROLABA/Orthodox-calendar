@@ -1,0 +1,29 @@
+{
+    "short_name": "The Orthodox calendar",
+    "name": "The Orthodox calendar",
+    "icons": [
+        {
+            "src": "isus.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "isus.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "isus.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "isus.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#ffffff"
+}
