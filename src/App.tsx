@@ -7,6 +7,7 @@ import HomePages from './pages/HomePages.tsx'
 import TeamPages from './pages/TeamPages.tsx'
 import { Route, Routes } from 'react-router'
 import ChurchService from './pages/ChurchService.tsx'
+import Chat from './pages/Chat.tsx'
 function App() {
 
   return (
@@ -17,7 +18,8 @@ function App() {
             <Routes>
               <Route index element={<HomePages />} />
               <Route path='/churchService' element={<ChurchService />} />
-              <Route path='team' element={<TeamPages />} />
+              <Route path='/team' element={<TeamPages />} />
+              <Route path='/chat' element={<Chat />} />
             </Routes>
           </Content>
           <Footer style={{
