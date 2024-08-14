@@ -233,6 +233,49 @@ ul li.slick-active {
   position: unset;
 }
 
+.flexed {
+  display: flex;
+  gap: 8px;
+}
+
+.footer-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+@media (max-width: 746px) {
+  .flexed {
+    flex-wrap: wrap !important;
+  }
+
+  .month-container {
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .two-tiles {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 570px) {
+  .footer-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .top {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 
 /* Reset and base styles  */
 * {

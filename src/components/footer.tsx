@@ -7,21 +7,19 @@ import { Link, useLocation } from "react-router-dom";
 export default function FooterPages() {
     const location = useLocation();
     const [activePage, setActivePage] = useState(() => {
-        // Set initial active page based on current route
         if (location.pathname === "/") return "Home";
         if (location.pathname === "/churchService") return "Church service";
-        // Add more conditions for other routes
-        return "Home"; // Default to Home if no match
+        return "Home";
     });
     const handleClick = (page: string) => {
-        setActivePage(page); // Устанавливаем активную страницу на клик
+        setActivePage(page);
     };
 
     return (
         <div>
             <div className="container">
-                <Flex justify="space-between" align="center">
-                    <Link to={""} className="nav-item" onClick={() => handleClick("Team")}>
+                <div className="footer-nav">
+                    <Link to={"/team"} className="nav-item" onClick={() => handleClick("Team")}>
                         <Flex align="center" gap={"8px"}>
                             <div className="icon-nav">
                                 <img src={activePage === "Team" ? ActiveStar : Star} alt="" />
@@ -61,7 +59,7 @@ export default function FooterPages() {
                             <a href="#" className={activePage === "Library" ? "active" : ""}>Library</a>
                         </Flex>
                     </Link >
-                </Flex>
+                </div>
             </div>
         </div>
     );

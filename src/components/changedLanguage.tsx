@@ -1,6 +1,6 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import RussianService from './russianService';
-
+import EngService from './engService';
 export default function ChangedLanguage() {
     const [activeTab, setActiveTab] = useState('');
 
@@ -60,13 +60,19 @@ export default function ChangedLanguage() {
                 <div style={{}}>
                     {activeTab === 'tab1' && <div style={{
                         height: "",
-                    }}></div>}
+                        borderBottom: "1px solid #E7E7E7",
+                        borderLeft: "1px solid #E7E7E7",
+                        borderRight: "1px solid #E7E7E7",
+                    }}>
+                        <EngService />
+                    </div>}
                     {activeTab === 'tab2' && <div style={{
                         height: "",
                         borderBottom: "1px solid #E7E7E7",
                         borderLeft: "1px solid #E7E7E7",
                         borderRight: "1px solid #E7E7E7",
-                    }}><RussianService /></div>}
+                    }}><RussianService />
+                    </div>}
                 </div>
             </div >
         </>

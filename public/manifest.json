@@ -3,24 +3,24 @@
     "name": "The Orthodox calendar",
     "icons": [
         {
-            "src": "isus.png",
+            "src": "isus.jpg",
             "sizes": "192x192",
-            "type": "image/png"
+            "type": "image/jpg"
         },
         {
-            "src": "isus.png",
+            "src": "isus.jpg",
             "sizes": "256x256",
-            "type": "image/png"
+            "type": "image/jpg"
         },
         {
-            "src": "isus.png",
+            "src": "isus.jpg",
             "sizes": "384x384",
-            "type": "image/png"
+            "type": "image/jpg"
         },
         {
-            "src": "isus.png",
+            "src": "isus.jpg",
             "sizes": "512x512",
-            "type": "image/png"
+            "type": "image/jpg"
         }
     ],
     "start_url": ".",

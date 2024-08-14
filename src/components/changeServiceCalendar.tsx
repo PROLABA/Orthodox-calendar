@@ -59,13 +59,13 @@ const ChangeServiceCalendar = () => {
                     loop
                     breakpoints={{
                         320: {
-                            slidesPerView: 2,
+                            slidesPerView: 6,
                         },
                         480: {
-                            slidesPerView: 3,
+                            slidesPerView: 8,
                         },
                         640: {
-                            slidesPerView: 4,
+                            slidesPerView: 10,
                         },
                         768: {
                             slidesPerView: 15.5,
