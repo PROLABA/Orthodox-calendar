@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 export default function Tiles() {
     return (
@@ -76,14 +77,15 @@ export default function Tiles() {
                         justifyContent: "center",
                         borderRadius: "9px"
                     }}>
-                        <p style={{
+                        <Link state={{ serviceType: "Evening" }} to={"/churchService"} style={{
                             fontFamily: "SF Pro",
                             fontSize: "16px",
                             fontWeight: "bold",
                             lineHeight: "20px",
+                            color: "black"
 
-                        }}>Evening church service</p>
-                        <div className="btn">Read</div>
+                        }}>Evening church service</Link>
+                        <Link state={{ serviceType: "Evening" }} to={'/churchService'} className="btn">Read</Link>
                     </div>
                     <div className="second-tiles" style={{
                         border: " 1px solid black",
@@ -95,14 +97,15 @@ export default function Tiles() {
                         justifyContent: "center",
                         borderRadius: "9px"
                     }}>
-                        <p style={{
+                        <Link state={{ serviceType: "Morning" }} to={"/churchService"} style={{
                             fontFamily: "SF Pro",
                             fontSize: "16px",
                             fontWeight: "bold",
                             lineHeight: "20px",
+                            color: "black"
 
-                        }}>Morninng church service</p>
-                        <div className="btn">Read</div>
+                        }}>Morning church service</Link>
+                        <Link state={{ serviceType: "Morning" }} to={'/churchService'} className="btn">Read</Link>
                     </div>
                 </div>
             </div>

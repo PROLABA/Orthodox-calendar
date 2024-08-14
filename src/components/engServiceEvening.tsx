@@ -4,7 +4,7 @@ import Plus from "./../assets/plus.svg";
 import ImageSlider from "./UI/ImageSlider";
 import Note from "../assets/note.png";
 
-export default function EngService() {
+export default function EngServiceEvening() {
     const images = [
         Note,
         Note,

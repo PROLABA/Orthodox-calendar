@@ -1,68 +1,51 @@
 import { Flex } from "antd";
-import Star from "./../assets/Star.svg"
-import ActiveStar from "./../assets/ActiveStar.svg"
-import { useState } from "react";
+import Star from "./../assets/Star.svg";
+import ActiveStar from "./../assets/ActiveStar.svg";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+
+const PAGES = {
+    HOME: "Home",
+    CHURCH_SERVICE: "Church service",
+    CHAT: "Chat",
+    TEAM: "Team",
+    LIBRARY: "Library"
+};
 
 export default function FooterPages() {
     const location = useLocation();
-    const [activePage, setActivePage] = useState(() => {
-        if (location.pathname === "/") return "home";
-        if (location.pathname === "/churchService") return "church service";
-        if (location.pathname === "/chat") return "chat";
-        if (location.pathname === "/team") return "team";
-        return "home";
-    });
-    const handleClick = (page: string) => {
-        setActivePage(page);
-    };
+    const [activePage, setActivePage] = useState(PAGES.HOME);
+
+    useEffect(() => {
+        switch (location.pathname) {
+            case "/": setActivePage(PAGES.HOME); break;
+            case "/churchService": setActivePage(PAGES.CHURCH_SERVICE); break;
+            case "/chat": setActivePage(PAGES.CHAT); break;
+            case "/team": setActivePage(PAGES.TEAM); break;
+            default: setActivePage(PAGES.HOME);
+        }
+    }, [location]);
+
+    const NavItem = ({ to, page }: { to: string; page: string }) => (
+        <Link to={to} className="nav-item">
+            <Flex align="center" gap={"8px"}>
+                <div className="icon-nav">
+                    <img src={activePage === page ? ActiveStar : Star} alt="" />
+                </div>
+                <span className={activePage === page ? "active" : ""}>{page}</span>
+            </Flex>
+        </Link>
+    );
 
     return (
-        <div>
-            <div className="container">
-                <div className="footer-nav">
-                    <Link to={"/team"} className="nav-item" onClick={() => handleClick("team")}>
-                        <Flex align="center" gap={"8px"}>
-                            <div className="icon-nav">
-                                <img src={activePage === "team" ? ActiveStar : Star} alt="" />
-                            </div>
-                            <a href="#" className={activePage === "team" ? "active" : ""}>Team</a>
-                        </Flex>
-                    </Link>
-                    <Link to={"/chat"} className="nav-item" onClick={() => handleClick("chat")}>
-                        <Flex align="center" gap={"8px"}>
-                            <div className="icon-nav">
-                                <img src={activePage === "chat" ? ActiveStar : Star} alt="" />
-                            </div>
-                            <a href="#" className={activePage === "chat" ? "active" : ""}>Chat</a>
-                        </Flex>
-                    </Link>
-                    <Link to={"/"} className="nav-item" onClick={() => handleClick("Home")}>
-                        <Flex align="center" gap={"8px"}>
-                            <div className="icon-nav">
-                                <img src={activePage === "Home" ? ActiveStar : Star} alt="" />
-                            </div>
-                            <a href="#" className={activePage === "Home" ? "active" : ""}>Home</a>
-                        </Flex>
-                    </Link >
-                    <Link to={"/churchService"} className="nav-item" onClick={() => handleClick("Church service")}>
-                        <Flex align="center" gap={"8px"}>
-                            <div className="icon-nav">
-                                <img src={activePage === "Church service" ? ActiveStar : Star} alt="" />
-                            </div>
-                            <a href="#" className={activePage === "Church service" ? "active" : ""}>Church service</a>
-                        </Flex>
-                    </Link>
-                    <Link to={""} className="nav-item" onClick={() => handleClick("Library")}>
-                        <Flex align="center" gap={"8px"}>
-                            <div className="icon-nav">
-                                <img src={activePage === "Library" ? ActiveStar : Star} alt="" />
-                            </div>
-                            <a href="#" className={activePage === "Library" ? "active" : ""}>Library</a>
-                        </Flex>
-                    </Link >
-                </div>
-            </div>
+        <div className="container">
+            <nav className="footer-nav">
+                <NavItem to="/team" page={PAGES.TEAM} />
+                <NavItem to="/chat" page={PAGES.CHAT} />
+                <NavItem to="/" page={PAGES.HOME} />
+                <NavItem to="/churchService" page={PAGES.CHURCH_SERVICE} />
+                <NavItem to="/library" page={PAGES.LIBRARY} />
+            </nav>
         </div>
     );
 }

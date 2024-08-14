@@ -4,7 +4,7 @@ import Plus from "./../assets/plus.svg";
 import ImageSlider from "./UI/ImageSlider";
 import Note from "../assets/note.png";
 
-export default function RussianService() {
+export default function RussianServiceMorning() {
     const images = [
         Note,
         Note,
@@ -27,7 +27,7 @@ export default function RussianService() {
                                 fontWeight: "Bold",
                                 lineHeight: "24px",
 
-                            }}>Вечерняя</div>
+                            }}>Утренняя</div>
                             <div className="deleteicon" style={{ cursor: "pointer" }}><img src={DeleteIcon} alt="" /></div>
                         </Flex >
                     </div >

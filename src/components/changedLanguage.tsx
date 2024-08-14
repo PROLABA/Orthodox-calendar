@@ -1,15 +1,43 @@
 import { useState } from 'react';
-import RussianService from './russianService';
-import EngService from './engService';
+import RussianServiceEvening from './russianServiceEvening';
+import EngServiceEvening from './engServiceEvening';
+import EngServiceMorning from './EngServiceMorning';
+import RussianServiceMorning from './RussianServiceMorning';
+import { useLocation } from 'react-router';
 export default function ChangedLanguage() {
+    const location = useLocation();
+    const { serviceType } = location.state || {};
     const [activeTab, setActiveTab] = useState('');
-
-    const handleTabClick = (tab: any) => {
+    const [activeBtn, setActiveBtn] = useState(serviceType ? serviceType : "Evening");
+    
+    const handleTabClick = (tab: string) => {
         setActiveTab(tab);
+    };
+
+    const handleClick = (btnName: string) => {
+        setActiveBtn(btnName);
     };
 
     return (
         <>
+            <>
+                <div className="container">
+                    <div className="center-container" style={{ background: "#E7E7E7", padding: "8px", borderRadius: "9px", marginTop: "16px" }}>
+                        <div
+                            className={`changed-btn ${activeBtn === 'Evening' ? 'active' : ''}`}
+                            onClick={() => handleClick('Evening')}
+                        >
+                            Evening
+                        </div>
+                        <div
+                            className={`changed-btn ${activeBtn === 'Morning' ? 'active' : ''}`}
+                            onClick={() => handleClick('Morning')}
+                        >
+                            Morning
+                        </div>
+                    </div>
+                </div>
+            </>
             <div className="container" style={{ paddingTop: "16px" }}>
                 <div style={{ display: 'flex', width: '100%' }}>
                     <div
@@ -58,21 +86,25 @@ export default function ChangedLanguage() {
                     </div>
                 </div>
                 <div style={{}}>
-                    {activeTab === 'tab1' && <div style={{
-                        height: "",
-                        borderBottom: "1px solid #E7E7E7",
-                        borderLeft: "1px solid #E7E7E7",
-                        borderRight: "1px solid #E7E7E7",
-                    }}>
-                        <EngService />
-                    </div>}
-                    {activeTab === 'tab2' && <div style={{
-                        height: "",
-                        borderBottom: "1px solid #E7E7E7",
-                        borderLeft: "1px solid #E7E7E7",
-                        borderRight: "1px solid #E7E7E7",
-                    }}><RussianService />
-                    </div>}
+                    {activeTab === 'tab1' && (
+                        <div style={{
+                            borderBottom: "1px solid #E7E7E7",
+                            borderLeft: "1px solid #E7E7E7",
+                            borderRight: "1px solid #E7E7E7"
+                        }}>
+                            {activeBtn === 'Morning' ? <EngServiceMorning /> : <EngServiceEvening />}
+                        </div>
+                    )}
+
+                    {activeTab === 'tab2' && (
+                        <div style={{
+                            borderBottom: "1px solid #E7E7E7",
+                            borderLeft: "1px solid #E7E7E7",
+                            borderRight: "1px solid #E7E7E7"
+                        }}>
+                            {activeBtn === 'Morning' ? <RussianServiceMorning /> : <RussianServiceEvening />}
+                        </div>
+                    )}
                 </div>
             </div >
         </>
