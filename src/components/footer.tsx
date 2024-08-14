@@ -22,6 +22,7 @@ export default function FooterPages() {
             case "/churchService": setActivePage(PAGES.CHURCH_SERVICE); break;
             case "/chat": setActivePage(PAGES.CHAT); break;
             case "/team": setActivePage(PAGES.TEAM); break;
+            case "/library": setActivePage(PAGES.LIBRARY); break;
             default: setActivePage(PAGES.HOME);
         }
     }, [location]);

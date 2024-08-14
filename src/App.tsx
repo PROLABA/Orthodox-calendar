@@ -8,6 +8,7 @@ import TeamPages from './pages/TeamPages.tsx'
 import { Route, Routes } from 'react-router'
 import ChurchService from './pages/ChurchService.tsx'
 import Chat from './pages/Chat.tsx'
+import Library from './pages/library.tsx'
 function App() {
 
   return (
@@ -20,6 +21,7 @@ function App() {
               <Route path='/churchService' element={<ChurchService />} />
               <Route path='/team' element={<TeamPages />} />
               <Route path='/chat' element={<Chat />} />
+              <Route path='/library' element={<Library />} />
             </Routes>
           </Content>
           <Footer style={{
