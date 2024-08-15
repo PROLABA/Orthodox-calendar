@@ -7,7 +7,7 @@ import { useLocation } from 'react-router';
 export default function ChangedLanguage() {
     const location = useLocation();
     const { serviceType } = location.state || {};
-    const [activeTab, setActiveTab] = useState('');
+    const [activeTab, setActiveTab] = useState('tab1');
     const [activeBtn, setActiveBtn] = useState(serviceType ? serviceType : "Evening");
     
     const handleTabClick = (tab: string) => {
