@@ -3,7 +3,7 @@ import userPhoto from '../assets/userPhoto.svg'
 export default function Team() {
     return (
 
-        <div className="container" style={{ paddingTop: "24px", paddingBottom: "10px" }}>
+        <div className="container" style={{ paddingTop: "32px", paddingBottom: "10px" }}>
             <div className="team-head">
                 <div className="content-title">Team</div>
                 <div className="btn-small">Go to team</div>
@@ -29,11 +29,11 @@ export default function Team() {
                 </div>
                 <div className="user">
                     <img src={userPhoto} alt="" />
-                    <div className="name">
+                    <div className="name" style={{ fontSize: "16px" }}>
                         Julia
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }

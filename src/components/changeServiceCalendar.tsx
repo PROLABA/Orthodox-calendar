@@ -55,6 +55,8 @@ const ChangeServiceCalendar = () => {
             </div>
             <div className="gray-border" style={{ border: "1px solid #E7E7E7", borderRadius: "9px", padding: "8px 0px 8px 0px ", marginTop: "16px" }}>
                 <Swiper
+                    slidesOffsetBefore={-10}
+                    slidesOffsetAfter={-30}
                     spaceBetween={8}
                     loop
                     breakpoints={{

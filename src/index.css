@@ -52,6 +52,7 @@ body {
   background: #474747;
   color: white;
   cursor: pointer;
+  transition: all 0.4s ease;
 }
 
 .team-head {
@@ -188,6 +189,27 @@ body {
   text-align: left;
 }
 
+@media (max-width: 410px) {
+  .btn-chor {
+    padding: 12px 0px;
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.ant-select-selection-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.ant-select-selection-item::before {
+  content: url('./assets/Note.svg');
+  position: relative;
+  top: 4px;
+}
+
 .slick-dots li {
   width: auto !important;
   height: auto !important;
@@ -234,6 +256,19 @@ ul li.slick-active {
   gap: 8px;
 }
 
+.ant-modal-close-x svg {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  fill: black;
+}
+
+@media (max-width: 834px) {
+  .footer-nav {
+    justify-content: space-around;
+  }
+}
+
 @media (max-width: 746px) {
   .flexed {
     flex-wrap: wrap !important;
@@ -264,6 +299,12 @@ ul li.slick-active {
     align-items: center;
   }
 }
+
+a:hover {
+  color: white;
+  opacity: 0.8;
+}
+
 
 /* Reset and base styles  */
 * {

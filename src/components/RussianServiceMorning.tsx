@@ -3,6 +3,7 @@ import DeleteIcon from "./../assets/DeleteIcon.svg";
 import Plus from "./../assets/plus.svg";
 import ImageSlider from "./UI/ImageSlider";
 import Note from "../assets/note.png";
+import NoteIcon from "./../assets/note.svg";
 
 export default function RussianServiceMorning() {
     const images = [
@@ -42,16 +43,21 @@ export default function RussianServiceMorning() {
                     </div>
                     <div className="flexed" >
                         <Select
-
-                            defaultValue={"Choose a note"}
-
+                            defaultValue={
+                                'Choose a note'}
                             style={{ width: 330, height: 40, borderColor: "black", borderRadius: "12px" }}
                             options={[
-                                { value: 'хор1', label: 'хор1' },
-                                { value: 'хор2', label: 'хор2' },
-                                { value: 'хор3', label: 'хор3' },
-                                { value: 'хор4', label: 'хор4', },
+                                { value: 'хор1', label: 'хор1', icon: NoteIcon },
+                                { value: 'хор2', label: 'хор2', icon: NoteIcon },
+                                { value: 'хор3', label: 'хор3', icon: NoteIcon },
+                                { value: 'хор4', label: 'хор4', icon: NoteIcon },
                             ]}
+                            optionRender={(option) => (
+                                <Flex align="center" gap={8}>
+                                    <img src={option.data.icon} alt="" />
+                                    {option.data.label}
+                                </Flex>
+                            )}
                         />
                         <div className="btn-chor"><span style={{ paddingRight: "12px" }}><img src={Plus} alt="" /></span>
                             Add your own notes

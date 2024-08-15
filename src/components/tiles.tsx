@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Tiles() {
     return (
 
-        <div className="container" style={{ paddingTop: "24px" }}>
+        <div className="container" style={{ paddingTop: "16px" }}>
             <div className="flex-container" >
                 <div className="sundy-tiles" style={{
                     padding: "32px 21px",
@@ -14,7 +14,7 @@ export default function Tiles() {
                     justifyContent: "center",
                     flexDirection: 'column',
                     gap: "16px",
-                    width: "50%",
+                    width: "100%",
                 }}>
                     <div className="top" style={{ display: "flex", alignItems: "center", gap: "16px" }}>
                         <div className="old" style={{

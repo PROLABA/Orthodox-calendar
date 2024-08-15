@@ -15,9 +15,13 @@ function App() {
   return (
     <>
       <div>
-        <Layout style={{ minHeight: '100vh', position: "relative", paddingBottom: "50px" }}>
-          <Content style={{ backgroundColor: 'white', marginBottom: " 25px " }}>
-            <Routes>
+        <Layout style={{ minHeight: '100vh', position: "relative", display: "flex", flexDirection: 'column', background: "white" }}>
+          <Content style={{
+            backgroundColor: 'white',
+            flexGrow: 1,
+            overflowY: 'auto',
+            paddingBottom: '50px'
+          }}>            <Routes>
               <Route index element={<HomePages />} />
               <Route path='/churchService' element={<ChurchService />} />
               <Route path='/team' element={<TeamPages />} />
@@ -28,10 +32,11 @@ function App() {
           <Footer style={{
             textAlign: 'center',
             borderTop: "1px solid rgb(231, 231, 231)",
-            position: 'fixed',
+            position: 'sticky',
             bottom: 0,
             width: '100%',
             marginTop: "10px",
+            backgroundColor: "white",
 
           }}>
             <FooterPages />

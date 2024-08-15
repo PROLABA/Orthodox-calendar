@@ -47,13 +47,12 @@ const ImageSlider = ({ images }: { images: string[] }) => {
 
     return (
         <>
-            <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', paddingTop: "8px" }}>
                 {images.map((image, index) => (
                     <div
                         key={index}
                         style={{
                             position: 'relative',
-                            margin: '10px',
                             cursor: 'pointer',
                             textAlign: 'center',
                         }}

@@ -28,7 +28,7 @@ export default function FooterPages() {
     }, [location]);
 
     const NavItem = ({ to, page }: { to: string; page: string }) => (
-        <Link to={to} className="nav-item">
+        <Link to={to} className="nav-item" onClick={() => window.scrollTo(0, 0)}>
             <Flex align="center" gap={"8px"}>
                 <div className="icon-nav">
                     <img src={activePage === page ? ActiveStar : Star} alt="" />

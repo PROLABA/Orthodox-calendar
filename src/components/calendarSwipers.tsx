@@ -33,6 +33,7 @@ export const DayComponent = ({ day, }: { day: Date, today: Date }) => {
                 fontWeight: "400",
                 lineHeight: "12px",
                 textAlign: "center",
+                color: 'black'
             }}>{format(day, 'd')}</div>
         </div >
     );
@@ -58,7 +59,7 @@ const DaysSwiper = () => {
                             <path fillRule="evenodd" clipRule="evenodd" d="M11.0839 1.11652C11.4444 1.47701 11.4444 2.06147 11.0839 2.42195L2.50585 11L11.0839 19.5781C11.4444 19.9385 11.4444 20.523 11.0839 20.8835C10.7234 21.244 10.139 21.244 9.77848 20.8835L0.547707 11.6527C0.187223 11.2922 0.187223 10.7078 0.547707 10.3473L9.77848 1.11652C10.139 0.75604 10.7234 0.75604 11.0839 1.11652Z" fill="black" />
                         </svg>
                     </button>
-                    <div style={{ fontSize: '18px', fontWeight: 'bold' }}>
+                    <div style={{ fontSize: '18px', fontWeight: 'bold', minWidth: "160px", textAlign: "center" }}>
                         {format(date, 'MMMM yyyy')}
                     </div>
                     <button onClick={() => handleMonthChange('next')}>
@@ -80,7 +81,7 @@ const DaysSwiper = () => {
                     </svg>
                 </div>
                 <div className="helper-text " style={{ display: 'flex', gap: "16px" }}>
-                    <p className="red" style={{ display: "flex", gap: "4px" }
+                    <p className="red" style={{ display: "flex", gap: "4px", color: "rgba(234, 96, 96, 1)" }
                     }>
                         <span >
                             <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -88,7 +89,7 @@ const DaysSwiper = () => {
                             </svg>
                         </span>
                         Orthodox holiday</p>
-                    <p className="green" style={{ display: "flex", gap: "4px" }}>
+                    <p className="green" style={{ display: "flex", gap: "4px", color: "rgba(9, 115, 32, 1)" }}>
                         <span >
                             <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="4" cy="4" r="4" fill="#097320" />
@@ -102,6 +103,8 @@ const DaysSwiper = () => {
                 <Swiper
                     spaceBetween={8}
                     loop
+                    slidesOffsetBefore={-10}
+                    slidesOffsetAfter={-30}
                     breakpoints={{
                         320: {
                             slidesPerView: 7,
@@ -133,7 +136,7 @@ const DaysSwiper = () => {
                     ))}
                 </Swiper>
             </div>
-        </div>
+        </div >
     );
 };
 
