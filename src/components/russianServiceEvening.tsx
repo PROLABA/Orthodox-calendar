@@ -3,7 +3,7 @@ import DeleteIcon from "./../assets/DeleteIcon.svg";
 import Plus from "./../assets/plus.svg";
 import ImageSlider from "./UI/ImageSlider";
 import Note from "./../assets/note.png";
-import NoteIcon from "./../assets/note.svg";
+import NoteIcon from "./../assets/Note.svg";
 
 export default function RussianServiceEvening() {
     const images = [
