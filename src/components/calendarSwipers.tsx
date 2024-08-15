@@ -101,11 +101,13 @@ const DaysSwiper = () => {
             </div>
             <div className="gray-border" style={{ border: "1px solid #E7E7E7", borderRadius: "9px", padding: "8px 0px 8px 0px ", marginTop: "16px" }}>
                 <Swiper
-                    spaceBetween={8}
                     loop
-                    slidesOffsetBefore={-10}
-                    slidesOffsetAfter={-30}
+                    slidesOffsetBefore={-20}
+                    spaceBetween={8}
                     breakpoints={{
+                        0: {
+                            slidesPerView: 7,
+                        },
                         320: {
                             slidesPerView: 7,
                         },

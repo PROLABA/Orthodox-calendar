@@ -87,6 +87,7 @@ body {
 
 .name {
   padding-top: 16px;
+  font-size: 16px;
 }
 
 .nav-item span {
@@ -252,8 +253,8 @@ ul li.slick-active {
 .footer-nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 8px;
+  justify-content: space-around;
+
 }
 
 .ant-modal-close-x svg {
@@ -292,6 +293,10 @@ ul li.slick-active {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+  }
+
+  .ant-layout-footer {
+    padding: 10px 5px;
   }
 
   .top {
