@@ -41,7 +41,7 @@ export default function EngServiceMorning() {
                             Хор:
                         </p>
                     </div>
-                    <Flex gap={8}>
+                    <div className="flexed" >
                         <Select
                             defaultValue={
                                 'Choose a note'}
@@ -62,7 +62,7 @@ export default function EngServiceMorning() {
                         <div className="btn-chor"><span style={{ paddingRight: "12px" }}><img src={Plus} alt="" /></span>
                             Add your own notes
                         </div>
-                    </Flex>
+                    </div>
                     <p style={{ paddingTop: "8px" }}>Господи, благослови!</p>
                     <div className="text" style={{ fontSize: "16px", paddingTop: "12px", lineHeight: "20px", fontWeight: "400" }}>
                         <p className="color-red">Priest:</p>
@@ -73,7 +73,7 @@ export default function EngServiceMorning() {
                         <ImageSlider images={images} />
                     </div>
                 </div >
-            </div>
+            </div >
 
         </>
     );
