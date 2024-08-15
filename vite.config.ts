@@ -17,28 +17,6 @@ export default defineConfig({
       manifest: {
         name: 'The Orthodox calendar',
         short_name: 'The Orthodox calendar',
-        icons: [
-          {
-            src: 'isus.jpg',
-            sizes: '192x192',
-            type: 'image/jpg',
-          },
-          {
-            src: 'isus.jpg',
-            sizes: '256x256',
-            type: 'image/jpg',
-          },
-          {
-            src: 'isus.jpg',
-            sizes: '384x384',
-            type: 'image/jpg',
-          },
-          {
-            src: 'isus.jpg',
-            sizes: '512x512',
-            type: 'image/jpg',
-          },
-        ],
         start_url: '.',
         display: 'standalone',
         background_color: '#ffffff',
