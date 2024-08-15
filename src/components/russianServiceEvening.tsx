@@ -1,4 +1,4 @@
-import { Flex, Select, Space } from "antd";
+import { Flex, Select } from "antd";
 import DeleteIcon from "./../assets/DeleteIcon.svg";
 import Plus from "./../assets/plus.svg";
 import ImageSlider from "./UI/ImageSlider";
