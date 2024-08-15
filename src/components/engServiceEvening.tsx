@@ -2,7 +2,7 @@ import { Flex, Select } from "antd";
 import DeleteIcon from "./../assets/DeleteIcon.svg";
 import Plus from "./../assets/plus.svg";
 import ImageSlider from "./UI/ImageSlider";
-import NoteIcon from "./../assets/note.svg";
+import NoteIcon from "./../assets/Note.svg";
 import Note from "./../assets/note.png"
 export default function EngServiceEvening() {
     const images = [
