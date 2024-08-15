@@ -77,7 +77,7 @@ export default function Tiles() {
                         justifyContent: "center",
                         borderRadius: "9px"
                     }}>
-                        <Link state={{ serviceType: "Evening" }} to={"/churchService"} style={{
+                        <Link state={{ serviceType: "Evening" }} to={"/churchService"} onClick={() => window.scrollTo(0, 0)} style={{
                             fontFamily: "SF Pro",
                             fontSize: "16px",
                             fontWeight: "bold",
@@ -85,7 +85,7 @@ export default function Tiles() {
                             color: "black"
 
                         }}>Evening church service</Link>
-                        <Link state={{ serviceType: "Evening" }} to={'/churchService'} className="btn">Read</Link>
+                        <Link state={{ serviceType: "Evening" }} onClick={() => window.scrollTo(0, 0)} to={'/churchService'} className="btn">Read</Link>
                     </div>
                     <div className="second-tiles" style={{
                         border: " 1px solid black",
@@ -97,7 +97,7 @@ export default function Tiles() {
                         justifyContent: "center",
                         borderRadius: "9px"
                     }}>
-                        <Link state={{ serviceType: "Morning" }} to={"/churchService"} style={{
+                        <Link state={{ serviceType: "Morning" }} onClick={() => window.scrollTo(0, 0)} to={"/churchService"} style={{
                             fontFamily: "SF Pro",
                             fontSize: "16px",
                             fontWeight: "bold",
@@ -105,7 +105,7 @@ export default function Tiles() {
                             color: "black"
 
                         }}>Morning church service</Link>
-                        <Link state={{ serviceType: "Morning" }} to={'/churchService'} className="btn">Read</Link>
+                        <Link state={{ serviceType: "Morning" }} onClick={() => window.scrollTo(0, 0)} to={'/churchService'} className="btn">Read</Link>
                     </div>
                 </div>
             </div>
