@@ -8,7 +8,8 @@ import TeamPages from './pages/TeamPages.tsx'
 import { Route, Routes } from 'react-router'
 import ChurchService from './pages/ChurchService.tsx'
 import Chat from './pages/Chat.tsx'
-import Library from './pages/library.tsx'
+import Library from './pages/Library.tsx'
+
 function App() {
 
   return (
